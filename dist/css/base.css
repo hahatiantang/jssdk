@@ -1,0 +1,435 @@
+#main {
+  position: relative;
+  margin: 25px auto;
+}
+#main .last_page_btn {
+  width: 40px;
+  height: 754px;
+  position: absolute;
+  left: -40px;
+  top: 0px;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0;
+}
+#main .last_page_btn:hover {
+  opacity: 0.6;
+}
+#main .next_page_btn {
+  width: 40px;
+  height: 754px;
+  position: absolute;
+  right: -40px;
+  top: 0px;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0;
+}
+#main .next_page_btn:hover {
+  opacity: 0.6;
+}
+#main #bookShadow {
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 10px 20px;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  display: none;
+}
+#main .pageList {
+  position: absolute;
+  top: 0px;
+}
+#main .pageList .FBStage {
+  position: relative;
+}
+#main .pageList .FBStage .FBPage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0% 0% 0px;
+  -ms-transform-origin: 0% 0% 0px;
+  -webkit-transform-origin: 0% 0% 0px;
+  -moz-transform-origin: 0% 0% 0px;
+  -o-transform-origin: 0% 0% 0px;
+}
+#main .pageList .FBStage .FBPageContainer {
+  overflow: hidden;
+  transform-origin: 0% 0% 0px;
+  -ms-transform-origin: 0% 0% 0px;
+  -webkit-transform-origin: 0% 0% 0px;
+  -moz-transform-origin: 0% 0% 0px;
+  -o-transform-origin: 0% 0% 0px;
+  position: absolute;
+}
+#main .pageList .FBStage .FBPageShadow {
+  position: absolute;
+}
+#main .pageList .FBStage .FBPageLight {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#main .pageList .FBStage .FBBlankPage {
+  background-color: #fff;
+}
+#main .pageList .FBStage .FBInnerPage {
+  position: absolute;
+  overflow: hidden;
+}
+#main .pageList .FBStage .page.even:before {
+  background: url("http://static.timeface.cn/resource/front/shadow-left.png") right top no-repeat;
+  content: "";
+  background-size: 100% 100%;
+  position: absolute;
+  width: 24px;
+  z-index: 100000;
+  color: #000;
+  right: 0px;
+  height: 100%;
+}
+#main .pageList .FBStage .page.odd:before {
+  background: url("http://static.timeface.cn/resource/front/shadow-right.png") right top no-repeat;
+  content: "";
+  background-size: 100% 100%;
+  position: absolute;
+  width: 24px;
+  z-index: 100000;
+  color: #000;
+  height: 100%;
+}
+.rangeSlider,
+.rangeSlider__fill {
+  background: #7f8c8d;
+  display: block;
+  height: 8px;
+  width: 100%;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+.rangeSlider {
+  position: relative;
+  z-index: 1000;
+}
+.rangeSlider--disabled {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+}
+.rangeSlider__fill {
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+.rangeSlider__handle {
+  background: white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: inline-block;
+  width: 22px;
+  height: 21px;
+  position: absolute;
+  top: -7px;
+  z-index: 3;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+.rangeSlider__handle:after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.13), rgba(255, 255, 255, 0));
+  border-radius: 50%;
+}
+.rangeSlider__handle:active {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.12));
+  outline: none;
+}
+input[type="range"]:focus + .rangeSlider .rangeSlider__handle {
+  box-shadow: 0 0 8px rgba(142, 68, 173, 0.9);
+}
+.rangeSlider__buffer {
+  z-index: 1;
+  position: absolute;
+  top: 2px;
+  height: 4px;
+  background: #2c3e50;
+  border-radius: 2px;
+}
+.irs {
+  height: 40px;
+}
+.irs-with-grid {
+  height: 60px;
+}
+.irs-line {
+  height: 8px;
+  top: 25px;
+}
+.irs-line-left {
+  height: 8px;
+  background-position: 0 -30px;
+}
+.irs-line-mid {
+  height: 8px;
+  background-position: 0 0;
+}
+.irs-line-right {
+  height: 8px;
+  background-position: 100% -30px;
+}
+.irs-bar {
+  height: 8px;
+  top: 25px;
+  background-position: 0 -60px;
+}
+.irs-bar-edge {
+  top: 25px;
+  height: 8px;
+  width: 11px;
+  background-position: 0 -90px;
+}
+.irs-shadow {
+  height: 1px;
+  top: 34px;
+  background: #000;
+  opacity: 0.15;
+}
+.lt-ie9 .irs-shadow {
+  filter: alpha(opacity=15);
+}
+.irs-slider {
+  width: 22px;
+  height: 22px;
+  top: 17px;
+  background-position: 0 -120px;
+}
+.irs-slider.state_hover,
+.irs-slider:hover {
+  background-position: 0 -150px;
+}
+.irs-min,
+.irs-max {
+  color: #999;
+  font-size: 10px;
+  line-height: 1.333;
+  text-shadow: none;
+  top: 0;
+  padding: 1px 3px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+.lt-ie9 .irs-min,
+.lt-ie9 .irs-max {
+  background: #ccc;
+}
+.irs-from,
+.irs-to,
+.irs-single {
+  color: #fff;
+  font-size: 10px;
+  line-height: 1.333;
+  text-shadow: none;
+  padding: 1px 5px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+.lt-ie9 .irs-from,
+.lt-ie9 .irs-to,
+.lt-ie9 .irs-single {
+  background: #999;
+}
+.irs-grid-pol {
+  background: #99a4ac;
+}
+.irs-grid-text {
+  color: #99a4ac;
+}
+.irs {
+  position: relative;
+  display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.irs-line {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  outline: none !important;
+}
+.irs-line-left,
+.irs-line-mid,
+.irs-line-right {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+.irs-line-left {
+  left: 0;
+  width: 11%;
+}
+.irs-line-mid {
+  left: 9%;
+  width: 82%;
+}
+.irs-line-right {
+  right: 0;
+  width: 11%;
+}
+.irs-bar {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 0;
+}
+.irs-bar-edge {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}
+.irs-shadow {
+  position: absolute;
+  display: none;
+  left: 0;
+  width: 0;
+}
+.irs-slider {
+  position: absolute;
+  display: block;
+  cursor: default;
+  z-index: 1;
+}
+.irs-slider.type_last {
+  z-index: 2;
+}
+.irs-min {
+  position: absolute;
+  display: block;
+  left: 0;
+  cursor: default;
+}
+.irs-max {
+  position: absolute;
+  display: block;
+  right: 0;
+  cursor: default;
+}
+.irs-from,
+.irs-to,
+.irs-single {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  cursor: default;
+  white-space: nowrap;
+}
+.irs-grid {
+  position: absolute;
+  display: none;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+}
+.irs-with-grid .irs-grid {
+  display: block;
+}
+.irs-grid-pol {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 8px;
+  background: #000;
+}
+.irs-grid-pol.small {
+  height: 4px;
+}
+.irs-grid-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 9px;
+  line-height: 9px;
+  padding: 0 3px;
+  color: #000;
+}
+.irs-disable-mask {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: -1%;
+  width: 102%;
+  height: 100%;
+  cursor: default;
+  background: rgba(0, 0, 0, 0);
+  z-index: 2;
+}
+.lt-ie9 .irs-disable-mask {
+  background: #000;
+  filter: alpha(opacity=0);
+  cursor: not-allowed;
+}
+.irs-disabled {
+  opacity: 0.4;
+}
+.irs-hidden-input {
+  position: absolute !important;
+  display: block !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden;
+  outline: none !important;
+  z-index: -9999 !important;
+  background: none !important;
+  border-style: solid !important;
+  border-color: transparent !important;
+}
+.range_slider {
+  position: absolute;
+  bottom: -60px;
+  width: 100%;
+  z-index: 100;
+  cursor: pointer;
+}
+.range_slider .irs-line-mid,
+.range_slider .irs-line-left,
+.range_slider .irs-line-right {
+  background: url('http://static.timeface.cn/resource/front/sliderLine.png') repeat-x;
+}
+.range_slider .irs-slider {
+  width: 12px;
+  height: 12px;
+  top: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #039ae3;
+}
+.range_slider .irs-bar-edge {
+  width: 8px;
+  top: 25px;
+  background: url('http://static.timeface.cn/resource/front/sliderLineHover.png') repeat-x;
+}
+.range_slider .irs-bar {
+  background: url('http://static.timeface.cn/resource/front/sliderLineHover.png') repeat-x;
+}

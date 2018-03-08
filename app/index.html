@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <script src="javascript/jquery.js"></script>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/jquery.lazyload.min.js"></script>
+    <script src="javascript/ion.rangeSlider.js"></script>
+    <script src="javascript/rangeSlider.min.js"></script>
+    <script src="http://wechatfe.github.io/vconsole/lib/vconsole.min.js?v=2.5.2"></script>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding:0px;
+    }
+    html,body{
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    body{
+
+        -webkit-user-select:none;
+        -webkit-text-size-adjust:none!important;
+    }
+</style>
+<body style="overflow: hidden">
+<div id="main">
+    <div class="pageList">
+
+    </div>
+
+    <div id="bookShadow"></div>
+</div>
+</body>
+<script>
+
+/*
+* access_token:418B9E7D087F36549707E525C0E2CD49
+ unionid:600175fb50d495e7ada0dcebda45d4a3*/
+
+//    $.ajax({
+//        type:'POST',
+//        url:"http://open.v5time.net/openpod/pod/pod/",
+//        data:{
+//            'access_token':'418B9E7D087F36549707E525C0E2CD49',
+//            'book_id':578307897230,
+//            'book_type':43,
+//            'unionid':'600175fb50d495e7ada0dcebda45d4a3',
+//            'rebuild':0
+//        },
+//        success: function (data) {
+//            var podData = data.data;
+//            window.fb =  new Timeface.FlipBook({
+//                // 容器名
+//                container: '.pageList',
+//
+//                // 书本单页宽度
+//                width: podData.book_width,
+//
+//                // 书本单页高度
+//                height: podData.book_height,
+//                editUrl:'edit',
+//                // 是否单页显示 true, false or auto
+//                ratioWidth:1,
+//                ratioHeight:1,
+//                //是否启动键盘左右键翻页
+//                startKeyboard:true,
+//                zoomScale: 1,
+//                currentPageIndex: 5,
+//                startIndex:podData.content_start_index,
+//                allPageCount: podData.content_list.length,
+//                podData:podData.content_list,
+//                // 初始化完成
+//                onInitComplete: function () {
+//                    //console.log('Init completed.');
+//                  /*   	if (!this.isSinglePage()) {
+//                     this.fbStage.animate({
+//                     marginLeft: -this.width / 2
+//                     }, 500);
+//                     $('#bookShadow').show().css('margin-left', this.width + 'px').animate({
+//                     marginLeft: this.width / 2
+//                     }, 500);
+//                     }*/
+//                },
+//                onFlipEndPage: function () {
+//
+//                }
+//            })
+//        }
+//    })
+
+
+    window.fb =  new Timeface.FlipBook({
+        // 容器名
+        container: '.pageList',
+        book_type:'54',
+        book_id:'627952381050',
+        baseURL:true,
+        // 书本单页宽度
+        /* width: podData.book_width,
+
+         // 书本单页高度
+         height: podData.book_height,*/
+        editUrl:false, //'edit',
+        // 是否单页显示 true, false or auto
+        isSinglePage: 'auto', //'auto',
+        ratioWidth:0.8,
+        ratioHeight:0.8,
+        //是否启动键盘左右键翻页
+        startKeyboard:true,
+        zoomScale: 1,
+        currentPageIndex: 5,
+        parameter:1,
+        bookPage:3,
+        onFlipEndPage:function () {
+            console.log('hahahah')
+        }
+        /*startIndex:podData.content_start_index,
+         allPageCount: podData.content_list.length,
+         podData:podData.content_list,*/
+        // 初始化完成
+       /* onInitComplete: function () {
+            //console.log('Init completed.');
+            /!*   	if (!this.isSinglePage()) {
+             this.fbStage.animate({
+             marginLeft: -this.width / 2
+             }, 500);
+             $('#bookShadow').show().css('margin-left', this.width + 'px').animate({
+             marginLeft: this.width / 2
+             }, 500);
+             }*!/
+        },
+
+        onFlipEndPage: function () {
+
+        }*/
+    })
+
+
+</script>
+</html>
